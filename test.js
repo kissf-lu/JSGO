@@ -2,24 +2,20 @@
  * Created by lujian on 2017-02-26.
  */
 
-var value = 30;
-
 var myObject = {
     value: 100,
     getValue:function () {
-        var value=50;
 
         var foo = {
             value: 12,
             get:function () {
 
-                console.log(this.value);
                 return this.value;
             }
 
         };
 
-        foo.get();
+        console.log(foo.get());
 
         return this.value;
     }
@@ -27,6 +23,18 @@ var myObject = {
 };
 
 
+var SomeClass1 = function(){
+    this.value = 10;
+};
+
+var SomeClass2 = function(){
+    this.value = 20;
+};
+var myCreate = {
+    sc1: new SomeClass1,
+    sc2: new SomeClass2
+};
+
 console.log((myObject.getValue)());
-console.log(typeof []);
-console.log([].constructor());
+console.log(myCreate.sc1.value);
+console.log(typeof [].constructor());
