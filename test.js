@@ -37,4 +37,6 @@ var myCreate = {
 
 console.log((myObject.getValue)());
 console.log(myCreate.sc1.value);
+console.log(myCreate.sc2.value);
 console.log(typeof [].constructor());
+
