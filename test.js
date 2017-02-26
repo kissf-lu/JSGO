@@ -6,15 +6,35 @@ var myObject = {
     value: 100,
     getValue:function () {
 
-        console.log(this.value); // 输出 100
+        var foo = {
+            value: 12,
+            get:function () {
 
-        // 输出 { value: 100, getValue: [Function] }，
-        // 其实就是 myObject 对象本身
-        console.log(this);
+                return this.value;
+            }
+
+        };
+
+        console.log(foo.get());
 
         return this.value;
     }
 
 };
 
-console.log(myObject.getValue()); // => 100
+
+var SomeClass1 = function(){
+    this.value = 10;
+};
+
+var SomeClass2 = function(){
+    this.value = 20;
+};
+var myCreate = {
+    sc1: new SomeClass1,
+    sc2: new SomeClass2
+};
+
+console.log((myObject.getValue)());
+console.log(myCreate.sc1.value);
+console.log(typeof [].constructor());
