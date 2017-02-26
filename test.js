@@ -7,16 +7,26 @@ var value = 30;
 var myObject = {
     value: 100,
     getValue:function () {
+        var value=50;
 
-        console.log(this.value); // 输出 100
+        var foo = {
+            value: 12,
+            get:function () {
 
-        // 输出 { value: 100, getValue: [Function] }，
-        // 其实就是 myObject 对象本身
-        console.log(this);
+                console.log(this.value);
+                return this.value;
+            }
+
+        };
+
+        foo.get();
 
         return this.value;
     }
 
 };
 
-console.log(myObject.getValue());
+
+console.log((myObject.getValue)());
+console.log(typeof []);
+console.log([].constructor());
