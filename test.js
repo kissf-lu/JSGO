@@ -2,6 +2,7 @@
  * Created by lujian on 2017-02-26.
  */
 
+var list = [];
 var x = 10;
 
 function xfunc(x) {
@@ -44,7 +45,7 @@ var myCreate = {
 
 xparam = xfunc(x);
 
-//console.log((myObject.getValue)());
+console.log((typeof {'a':1.99,'b':2,'c':4}.a));
 console.log(myCreate.sc1.value);
 console.log(myCreate.sc2.value);
 console.log("log:",xparam, x);
