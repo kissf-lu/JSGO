@@ -2,6 +2,8 @@
  * Created by lujian on 2017-02-26.
  */
 
+var value = 30;
+
 var myObject = {
     value: 100,
     getValue:function () {
@@ -17,4 +19,4 @@ var myObject = {
 
 };
 
-console.log(myObject.getValue()); // => 100
+console.log(myObject.getValue());
