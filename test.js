@@ -2,6 +2,14 @@
  * Created by lujian on 2017-02-26.
  */
 
+var x = 10;
+
+function xfunc(x) {
+
+    var x = (x+10);
+
+    return x;
+}
 var myObject = {
     value: 100,
     getValue:function () {
@@ -19,7 +27,6 @@ var myObject = {
 
         return this.value;
     }
-
 };
 
 
@@ -35,8 +42,10 @@ var myCreate = {
     sc2: new SomeClass2
 };
 
-console.log((myObject.getValue)());
+xparam = xfunc(x);
+
+//console.log((myObject.getValue)());
 console.log(myCreate.sc1.value);
 console.log(myCreate.sc2.value);
-console.log(typeof [].constructor());
+console.log("log:",xparam, x);
 
