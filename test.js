@@ -41,7 +41,7 @@ var SomeClass2 = function(){
 };
 
 
-
+//add numbers
 var myCreate = {
     sc1: new SomeClass1,
     sc2: new SomeClass2
