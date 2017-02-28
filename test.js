@@ -11,6 +11,7 @@ function xfunc(x) {
 
     return x;
 }
+
 var myObject = {
     value: 100,
     getValue:function () {
@@ -38,15 +39,18 @@ var SomeClass1 = function(){
 var SomeClass2 = function(){
     this.value = 20;
 };
+
+
+
 var myCreate = {
     sc1: new SomeClass1,
     sc2: new SomeClass2
 };
 
-xparam = xfunc(x);
+x = xfunc(x);
 
 console.log((typeof {'a':1.99,'b':2,'c':4}.a));
 console.log(myCreate.sc1.value);
 console.log(myCreate.sc2.value);
-console.log("log:",xparam, x);
-
+console.log("log:",x);
+console.log("");
