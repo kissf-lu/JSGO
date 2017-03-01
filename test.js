@@ -2,6 +2,11 @@
  * Created by lujian on 2017-02-26.
  */
 
+//------ main.js ------
+import { square, diag } from 'lib/lib.js';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
 var list = [];
 var x = 10;
 
