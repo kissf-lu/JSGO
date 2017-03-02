@@ -2,6 +2,11 @@
  * Created by lujian on 2017-02-26.
  */
 
+//------ main.js ------
+import { square, diag } from 'lib/lib.js';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+
 var list = [];
 var x = 10;
 
@@ -11,6 +16,7 @@ function xfunc(x) {
 
     return x;
 }
+
 
 var myObject = {
     value: 100,
@@ -53,4 +59,32 @@ console.log((typeof {'a':1.99,'b':2,'c':4}.a));
 console.log(myCreate.sc1.value);
 console.log(myCreate.sc2.value);
 console.log("log:",x);
-console.log("");
+
+var globeVar = {
+    'alertWinStr':'',
+    'ID':{
+        'DeleteID' : 'DeleteID',
+        'UpdateID' : 'UpdateID',
+        'InsertID' : 'InsertID'
+    },
+    'init': function (initParam) {
+        this.alertWinStr = initParam.alertWinStr;
+
+    },
+    'set': function (srtParam) {
+        this.alertWinStr = srtParam.alertWinStr;
+    }
+
+};
+
+var newvar = globeVar;
+
+newvar.set({'alertWinStr':'varTest2'});
+globeVar.set({'alertWinStr':'varTest3'});
+
+console.log(
+    globeVar.alertWinStr
+);
+console.log(
+    newvar.alertWinStr
+);
