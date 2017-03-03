@@ -3,9 +3,6 @@
  */
 
 //------ main.js ------
-import { square, diag } from 'lib/lib.js';
-console.log(square(11)); // 121
-console.log(diag(4, 3)); // 5
 
 var list = [];
 var x = 10;
@@ -62,6 +59,7 @@ console.log("log:",x);
 
 var globeVar = {
     'alertWinStr':'',
+    'array':[],
     'ID':{
         'DeleteID' : 'DeleteID',
         'UpdateID' : 'UpdateID',
@@ -73,6 +71,9 @@ var globeVar = {
     },
     'set': function (srtParam) {
         this.alertWinStr = srtParam.alertWinStr;
+    },
+    'setArray': function (arraydata) {
+        this.array=arraydata;
     }
 
 };
@@ -87,4 +88,12 @@ console.log(
 );
 console.log(
     newvar.alertWinStr
+);
+function testVar(arrayobj) {
+    arrayobj.setArray([1,2]);
+}
+
+testVar(newvar);
+console.log(
+    newvar.array
 );
