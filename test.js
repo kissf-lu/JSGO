@@ -24,21 +24,26 @@ function testVar() {
         }
     };
     var func2Dic = {
-        array_f2: globeVar.array_t
+        array_t: []
     };
-    test2Var(func2Dic);
 
-    return func2Dic;
+    test2Var(globeVar, [2,2]);
+
+    console.log(
+        globeVar.array_t
+    );
+    return globeVar;
 }
 
-function test2Var(arg) {
-    arg.array_f2=[3,4];
+function test2Var(arg, list) {
+    var local_arg = arg;
+    local_arg.array_t=list;
 }
 
 var returnarray = testVar();
 //returnarray.array_t=[1,2];
 //newvar.setArray([]);
-test2Var(returnarray);
+//test2Var(returnarray, [3,3]);
 console.log(
-    returnarray.array_f2
+    returnarray.array_t
 );
