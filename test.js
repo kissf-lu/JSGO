@@ -5,7 +5,7 @@
 //------ main.js ------
 
 function testVar() {
-    let globeVar = {
+    var globeVar = {
         alertWinStr:'',
         array_t:[],
         ID:{
@@ -26,15 +26,19 @@ function testVar() {
     var func2Dic = {
         array_f2: globeVar.array_t
     };
-    return globeVar;
+    test2Var(func2Dic);
+
+    return func2Dic;
 }
 
 function test2Var(arg) {
-
+    arg.array_f2=[3,4];
 }
 
 var returnarray = testVar();
+//returnarray.array_t=[1,2];
 //newvar.setArray([]);
+test2Var(returnarray);
 console.log(
-    returnarray.array_t
+    returnarray.array_f2
 );
