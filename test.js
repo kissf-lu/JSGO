@@ -182,3 +182,20 @@ let s = new Square(5);
 s.sayName();
 console.log('The area of this square is ' + s.area);
 
+var a=null;
+if (!a){
+    console.log('a','undefined!',1+a);
+} else {
+    console.log('a','ok!',a);
+}
+
+/**
+ * Example 2
+ */
+// will return a value of undefined
+var myvar = "my value";
+
+(function() {
+    console.log(myvar); // undefined
+    var myvar = "local value";
+})();
