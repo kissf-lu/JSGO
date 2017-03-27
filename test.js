@@ -84,6 +84,12 @@ function MyObject(name, message) {
     };
 }).call(MyObject.prototype);
 
+
+
+
+
+
+
 // Example 1: Creating a new class (declaration-form)
 // ===============================================================
 
@@ -97,7 +103,6 @@ class Polygon {
         this.height = height;
         this.width = width;
     }
-
     // Simple class instance methods using short-hand method
     // declaration
     sayName() {
@@ -112,10 +117,15 @@ class Polygon {
     // We will look at static and subclassed methods shortly
 }
 
+
+
 // Classes are used just like ES5 constructor functions:
 let p = new Polygon(300, 400);
 p.sayName();
 console.log('The width of this polygon is ' + p.width);
+
+
+
 
 // Example 2: Creating a new class (expression-form)
 // ===============================================================
@@ -133,6 +143,7 @@ const MyPoly = class Poly {
 
 let inst = new MyPoly();
 inst.getPolyName();
+//inst.sayName;
 
 // Example 3: Extending an existing class
 // ===============================================================
